@@ -1,0 +1,20 @@
+JOMO consultation page - setup
+
+Files in this folder
+1. jomo-consultation.html   the page (open in a browser or upload to your website)
+2. google-apps-script.gs    the code that saves form entries into a Google Sheet
+
+Steps
+1. Create a new Google Sheet.
+2. In the sheet: Extensions > Apps Script.
+3. Delete the starter code, paste everything from google-apps-script.gs, click Save.
+4. Deploy > New deployment > gear icon > Web app.
+   Execute as: Me.  Who has access: Anyone.  Click Deploy and approve the permissions.
+5. Copy the Web app URL (starts with https://script.google.com/macros/s/...).
+6. Open jomo-consultation.html in a text editor, find this line near the end:
+       var SHEET_URL = "PASTE_YOUR_WEB_APP_URL_HERE";
+   Replace the text inside the quotes with your URL. Save.
+7. Test: fill in a name and number on the page. A new row appears in the sheet.
+
+If you edit the script later: Deploy > Manage deployments > Edit > New version > Deploy.
+The URL stays the same.
